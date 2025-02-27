@@ -1,0 +1,8 @@
+Bubble Sort, Array Size: 5, Time: 0.627851s
+Merge Sort, Array Size: 5, Time: 0.762440s
+Quick Sort, Array Size: 5, Time: 0.418906s
+Radix Sort, Array Size: 5, Time: 1.267669s
+Linear Search, Array Size: 5, Time: 0.269857s
+Bubble Sort, Array Size: 20, Time: 18.323262s
+Quick Sort, Array Size: 20, Time: 4.817805s
+Linear Search, Array Size: 20, Time: 1.524300s
