@@ -28,17 +28,17 @@ def merge_sort(flights):
             k += 1
 
 # Take user input
-number_flights = int(input("Enter number of flights: "))
-flights = []
-for _ in range(number_flights):
-    flight_no = input("Enter flight number: ")
-    dep_time = int(input(f"Enter departure time for {flight_no}: "))
-    flights.append((flight_no, dep_time))
+# number_flights = int(input("Enter number of flights: "))
+# flights = []
+# for _ in range(number_flights):
+#     flight_no = input("Enter flight number: ")
+#     dep_time = int(input(f"Enter departure time for {flight_no}: "))
+#     flights.append((flight_no, dep_time))
 
 # Measure the execution time
-start_time = time.time()
-merge_sort(flights)
-end_time = time.time()
+# start_time = time.time()
+# merge_sort(flights)
+# end_time = time.time()
 
-print("Flights sorted by departure time: ", flights)
-print(f"Execution time: {end_time - start_time:.6f} seconds")
+# print("Flights sorted by departure time: ", flights)
+# print(f"Execution time: {end_time - start_time:.6f} seconds")
