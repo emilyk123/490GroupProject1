@@ -29,9 +29,11 @@ num_arrays = 4
 
 bar_graph = plt.subplot(111)
 for i in range(num_arrays):
-    bar_graph.bar(i + 1 - 0.2, merge_runtime, width=0.2, color='b', align='center')
-    bar_graph.bar(i + 1, merge_runtime, width=0.2, color='g', align='center')
-    bar_graph.bar(i + 1 + 0.2, merge_runtime, width=0.2, color='r', align='center')
+    bar_graph.bar(i + 1 - 0.2, merge_runtime, width=0.1, color='b', align='center')
+    bar_graph.bar(i + 1 - 0.1, merge_runtime, width=0.1, color='c', align='center')
+    bar_graph.bar(i + 1, merge_runtime, width=0.1, color='g', align='center')
+    bar_graph.bar(i + 1 + 0.1, merge_runtime, width=0.1, color='m', align='center')
+    bar_graph.bar(i + 1 + 0.2, merge_runtime, width=0.1, color='r', align='center')
 
 bar_graph.get_xaxis().set_ticks([])
 plt.title('Runtime Complexity Analysis')
