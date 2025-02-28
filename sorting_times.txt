@@ -1,8 +1,23 @@
-Bubble Sort, Array Size: 5, Time: 0.627851s
-Merge Sort, Array Size: 5, Time: 0.762440s
-Quick Sort, Array Size: 5, Time: 0.418906s
-Radix Sort, Array Size: 5, Time: 1.267669s
-Linear Search, Array Size: 5, Time: 0.269857s
-Bubble Sort, Array Size: 20, Time: 18.323262s
-Quick Sort, Array Size: 20, Time: 4.817805s
-Linear Search, Array Size: 20, Time: 1.524300s
+Bubble Sort,5,0.488027
+Bubble Sort,20,11.383322
+Merge Sort,20,13.281719
+Quick Sort,20,13.309025
+Radix Sort,20,15.040241
+Bubble Sort,10,3.791820
+Bubble Sort,5,0.639857
+Merge Sort,5,1.558918
+Merge Sort,5,1.506967
+Merge Sort,5,1.498260
+Quick Sort,5,0.639125
+Quick Sort,5,0.648561
+Quick Sort,10,1.864236
+Merge Sort,10,4.468078
+Radix Sort,5,2.603389
+Radix Sort,10,5.408164
+Linear Search,5,0.397586
+Linear Search,10,0.988281
+Merge Sort,10,2.543862
+Linear Search,10,0.964105
+Linear Search,20,0.555980
+Linear Search,20,1.112663
+Merge Sort,10,2.591028

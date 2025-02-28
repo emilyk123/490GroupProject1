@@ -17,6 +17,7 @@ from algorithms.MergeSort import merge_sort
 from algorithms.QuickSort import quick_sort
 from algorithms.RadixSort import radix_sort
 from algorithms.LinearSearch import linear_search
+import Graph
 
 class SortingVisualizer:
     """Main visualization class handling UI and algorithm execution."""
@@ -48,6 +49,8 @@ class SortingVisualizer:
         # Initial plot setup
         self.bars = self.ax.bar([], [])
         self.ax.set_title("Algorithm Visualizer", fontsize=16)
+
+        self.graph = Graph.Graph()
 
     def _create_controls(self):
         """Create and arrange all UI control elements."""
@@ -93,6 +96,10 @@ class SortingVisualizer:
         reset_ax = plt.axes([0.49, 0.01, 0.1, 0.06])
         self.reset_btn = Button(reset_ax, 'Reset')
         self.reset_btn.on_clicked(self._reset)
+
+        graph_ax = plt.axes([0.61, 0.01, 0.1, 0.06])
+        self.graph_btn = Button(graph_ax, 'Graph')
+        self.graph_btn.on_clicked(self._show_graph)
 
     def _cycle_array_size(self, _event):
         """
@@ -262,8 +269,12 @@ class SortingVisualizer:
         """Record the algorithm execution time to a file."""
         elapsed = time.time() - self.start_time
         with open('sorting_times.txt', 'a') as f:
-            f.write(f"{self.current_algo}, Array Size: {len(self.original_arr)}, Time: {elapsed:.6f}s\n")
+            f.write(f"{self.current_algo},{len(self.original_arr)},{elapsed:.6f}\n")
         print(f"{self.current_algo} completed in {elapsed:.2f}s")
+    
+    def _show_graph(self, _event):
+        self.ax.clear()
+        self.graph.create_graph()
 
 if __name__ == '__main__':
     visualizer = SortingVisualizer()
