@@ -1,14 +1,16 @@
 def merge_sort(arr):
     if len(arr) > 1:
-        mid = len(arr) // 2
-        left = arr[:mid]
+        mid = len(arr) // 2 # Finding the middle of the array
+        left = arr[:mid] # Dividing the array elements into 2 halves
         right = arr[mid:]
-        yield from merge_sort(left)
-        yield from merge_sort(right)
+        yield from merge_sort(left) # Sorting the first half
+        yield from merge_sort(right) # Sorting the second half
         
         i = j = k = 0
         while i < len(left) and j < len(right):
-            if left[i] < right[j]:
+            # Comparing elements from both halves 
+            # Then add the smallest element to the sorted list
+            if left[i] < right[j]: 
                 arr[k] = left[i]
                 i += 1
             else:
@@ -17,8 +19,10 @@ def merge_sort(arr):
             k += 1
             yield arr
         
+        # Checking if any element was left
+        # If yes, add it to the sorted list
         while i < len(left):
-            arr[k] = left[i]
+            arr[k] = left[i] 
             i += 1
             k += 1
             yield arr

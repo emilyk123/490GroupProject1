@@ -1,12 +1,15 @@
 def quick_sort(arr, low, high):
-    if low < high:
-        pi = yield from partition(arr, low, high)
+    if low < high: # If low >= high, the array is sorted
+        pi = yield from partition(arr, low, high) # The partitioning index
         yield from quick_sort(arr, low, pi-1)
         yield from quick_sort(arr, pi+1, high)
 
 def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
+    pivot = arr[high] # Set pivot element
+    i = low - 1 # Index of smaller element
+
+    # If current element is smaller than the pivot
+    # Swap the element at i+1 with the element at j
     for j in range(low, high):
         if arr[j] < pivot:
             i += 1
